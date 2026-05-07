@@ -1,26 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { Atelier } from "@/components/Atelier";
+import { Gallery } from "@/components/Gallery";
+import { Testimonials } from "@/components/Testimonials";
+import { Instagram } from "@/components/Instagram";
+import { BookingCTA } from "@/components/BookingCTA";
+import { Footer } from "@/components/Footer";
+import { StickyBook } from "@/components/StickyBook";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Alabama · Brazilian Keratin Expert | Luxury Hair Atelier" },
+      { name: "description", content: "Private luxury atelier specializing in Brazilian keratin, balayage, and lived-in brunette transformations. Formaldehyde-free, couture hair in Miami." },
+      { property: "og:title", content: "Alabama · Brazilian Keratin Expert" },
+      { property: "og:description", content: "Couture Brazilian keratin and balayage, in a private Miami atelier." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="dark min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <Atelier />
+        <Gallery />
+        <Testimonials />
+        <Instagram />
+        <BookingCTA />
+      </main>
+      <Footer />
+      <StickyBook />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
