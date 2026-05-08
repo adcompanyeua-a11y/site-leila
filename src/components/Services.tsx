@@ -12,9 +12,6 @@ export function Services() {
     { name: "Color Correction", nameEs: "Corrección de Color", desc: "Restorative artistry for compromised or unwanted tones.", descEs: "Arte restaurador para tonos comprometidos o no deseados.", price: "by consultation", priceEs: "por consulta" },
     { name: "Haircut & Style", nameEs: "Corte y Peinado", desc: "Architectural cuts crafted for your face & lifestyle.", descEs: "Cortes arquitectónicos creados para tu rostro y estilo de vida.", price: "from $120", priceEs: "desde $120" },
   ];
-  const isEs = (typeof window !== "undefined" && localStorage.getItem("lang") === "es");
-  const lang = isEs ? "es" : "en";
-  // use translation key existence as signal:
   const isSpanish = t("services_signature") === "Insignia";
 
   return (
