@@ -26,7 +26,7 @@ export function BookingCTA() {
 
         <div id="contact" className="mt-12 flex flex-wrap justify-center gap-5">
           <a
-            href="https://wa.me/12059831715?text=Hello%2C%20I%20came%20from%20the%20website%20and%20I%20want%20more%20information."
+            href="https://www.tiktok.com/@leila.bassanezi"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[image:var(--gradient-gold)] text-primary-foreground text-[11px] uppercase tracking-[0.32em] glow-on-hover font-medium"
@@ -34,17 +34,17 @@ export function BookingCTA() {
             {t("book_whatsapp")}
           </a>
           <a
-            href="tel:+13050000000"
+            href="tel:+12059831715"
             className="inline-flex items-center gap-3 px-9 py-4 rounded-full border border-primary/50 text-primary hover:bg-primary/10 text-[11px] uppercase tracking-[0.32em] transition-colors"
           >
-            +1 (305) 000-0000
+            +1 (205) 983-1715
           </a>
         </div>
 
         <div className="mt-16 grid sm:grid-cols-3 gap-8 text-left max-w-3xl mx-auto pt-12 border-t border-border">
           <div>
             <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">{t("book_studio")}</div>
-            <div className="text-sm text-foreground/85">Brickell Avenue<br />Miami, FL</div>
+            <div className="text-sm text-foreground/85">Randolph,<br />Alabama</div>
           </div>
           <div>
             <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">{t("book_hours")}</div>

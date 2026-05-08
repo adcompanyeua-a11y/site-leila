@@ -4,13 +4,87 @@ import { useI18n } from "@/lib/i18n";
 export function Services() {
   const { t } = useI18n();
   const services = [
-    { name: "Brazilian Keratin Treatment", nameEs: "Queratina Brasileña", desc: "Our signature smoothing ritual. Frizz-free, glass-glossy, formaldehyde-free.", descEs: "Nuestro ritual alisador insignia. Sin frizz, brillo de cristal, sin formaldehído.", price: "from $350", priceEs: "desde $350", featured: true },
-    { name: "Balayage", nameEs: "Balayage", desc: "Hand-painted dimension for sun-kissed, lived-in luminosity.", descEs: "Dimensión pintada a mano para una luminosidad besada por el sol.", price: "from $280", priceEs: "desde $280" },
-    { name: "Lived-In Brunette", nameEs: "Castaño Natural", desc: "Soft, melted brunette tones designed to grow gracefully.", descEs: "Tonos castaños suaves y derretidos diseñados para crecer con gracia.", price: "from $260", priceEs: "desde $260" },
-    { name: "Highlights", nameEs: "Mechas", desc: "Precision foiling for crisp, dimensional brightness.", descEs: "Mechas de precisión para un brillo nítido y dimensional.", price: "from $240", priceEs: "desde $240" },
-    { name: "Hair Coloring", nameEs: "Coloración", desc: "Bespoke single-process color tailored to your complexion.", descEs: "Color a medida en un solo proceso, adaptado a tu tez.", price: "from $180", priceEs: "desde $180" },
-    { name: "Color Correction", nameEs: "Corrección de Color", desc: "Restorative artistry for compromised or unwanted tones.", descEs: "Arte restaurador para tonos comprometidos o no deseados.", price: "by consultation", priceEs: "por consulta" },
-    { name: "Haircut & Style", nameEs: "Corte y Peinado", desc: "Architectural cuts crafted for your face & lifestyle.", descEs: "Cortes arquitectónicos creados para tu rostro y estilo de vida.", price: "from $120", priceEs: "desde $120" },
+    { 
+      name: "Woman’s Haircut", 
+      nameEs: "Corte de Dama", 
+      desc: "Professional precision cut tailored to your unique features and style.", 
+      descEs: "Corte profesional de precisión adaptado a sus facciones y estilo únicos.", 
+      price: "$35", 
+      priceEs: "$35" 
+    },
+    { 
+      name: "Specials Haircuts / Textures / Blow-dry / Moisturizing", 
+      nameEs: "Especiales de Corte / Texturas / Secado / Hidratación", 
+      desc: "Comprehensive package for a complete hair rejuvenation and styling.", 
+      descEs: "Paquete integral para un rejuvenecimiento y peinado completo del cabello.", 
+      price: "$60", 
+      priceEs: "$60" 
+    },
+    { 
+      name: "Brazilian Keratin", 
+      nameEs: "Queratina Brasileña", 
+      desc: "Our signature smoothing treatment for frizz-free, glass-glossy hair.", 
+      descEs: "Nuestro tratamiento alisador insignia para un cabello sin frizz y con brillo de cristal.", 
+      price: "$150 / $200 / $250", 
+      priceEs: "$150 / $200 / $250", 
+      featured: true 
+    },
+    { 
+      name: "Botox (Volume Reduction)", 
+      nameEs: "Botox (Reducción de Volumen)", 
+      desc: "Deep conditioning treatment designed to reduce volume and restore vitality.", 
+      descEs: "Tratamiento de acondicionamiento profundo diseñado para reducir el volumen y restaurar la vitalidad.", 
+      price: "$100 / $130 / $150", 
+      priceEs: "$100 / $130 / $150" 
+    },
+    { 
+      name: "Bright Streaking", 
+      nameEs: "Mechas Brillantes", 
+      desc: "Luminous, strategically placed highlights for a vibrant, sun-kissed look.", 
+      descEs: "Mechas luminosas estratégicamente colocadas para un look vibrante y besado por el sol.", 
+      price: "$100 / $150 / $200", 
+      priceEs: "$100 / $150 / $200" 
+    },
+    { 
+      name: "Highlights Basic", 
+      nameEs: "Mechas Básicas", 
+      desc: "Classic dimensional brightness to enhance your natural hair color.", 
+      descEs: "Brillo dimensional clásico para realzar el color natural de su cabello.", 
+      price: "$100 / $150 / $200", 
+      priceEs: "$100 / $150 / $200" 
+    },
+    { 
+      name: "Highlights Full", 
+      nameEs: "Mechas Completas", 
+      desc: "All-over highlighting for maximum dimension and transformative brightness.", 
+      descEs: "Mechas completas para una dimensión máxima y un brillo transformador.", 
+      price: "$200 / $250 / $300", 
+      priceEs: "$200 / $250 / $300" 
+    },
+    { 
+      name: "Hair Colouring", 
+      nameEs: "Coloración de Cabello", 
+      desc: "Bespoke professional color tailored perfectly to your complexion.", 
+      descEs: "Color profesional a medida adaptado perfectamente a su tez.", 
+      price: "$80 / $100 / $120", 
+      priceEs: "$80 / $100 / $120" 
+    },
+    { 
+      name: "Moisturizing + Blow-dry", 
+      nameEs: "Hidratación + Secado", 
+      desc: "Intensive moisturizing ritual followed by a professional, voluminous blowout.", 
+      descEs: "Ritual de hidratación intensiva seguido de un secado profesional y voluminoso.", 
+      price: "$70 / $80 / $90", 
+      priceEs: "$70 / $80 / $90" 
+    },
+    { 
+      name: "Henna Eyebrow", 
+      nameEs: "Cejas de Henna", 
+      desc: "Precision brow shaping and natural tinting with premium henna.", 
+      descEs: "Perfilado de cejas de precisión y tinte natural con henna de primera calidad.", 
+      price: "$25", 
+      priceEs: "$25" 
+    },
   ];
   const isSpanish = t("services_signature") === "Insignia";
 
