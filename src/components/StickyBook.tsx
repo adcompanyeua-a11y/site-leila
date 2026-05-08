@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useI18n } from "@/lib/i18n";
 
 export function StickyBook() {
   const [show, setShow] = useState(false);
+  const { t } = useI18n();
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
     onScroll();
@@ -18,7 +20,7 @@ export function StickyBook() {
       }`}
     >
       <span aria-hidden>✦</span>
-      Book Now
+      {t("sticky_book")}
     </a>
   );
 }
