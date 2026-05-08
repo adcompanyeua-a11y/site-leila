@@ -26,7 +26,7 @@ export function BookingCTA() {
 
         <div id="contact" className="mt-12 flex flex-wrap justify-center gap-5">
           <a
-            href="https://wa.me/13050000000"
+            href="https://wa.me/12059831715?text=Hello%2C%20I%20came%20from%20the%20website%20and%20I%20want%20more%20information."
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[image:var(--gradient-gold)] text-primary-foreground text-[11px] uppercase tracking-[0.32em] glow-on-hover font-medium"
