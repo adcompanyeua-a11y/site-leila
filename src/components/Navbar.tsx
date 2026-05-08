@@ -13,7 +13,7 @@ export function Navbar() {
     { href: "#services", label: t("nav_services") },
     { href: "#gallery", label: t("nav_gallery") },
     { href: "#testimonials", label: t("nav_testimonials") },
-    { href: "#instagram", label: t("nav_instagram") },
+    { href: "#tiktok", label: t("nav_instagram") },
     { href: "#contact", label: t("nav_contact") },
   ];
 

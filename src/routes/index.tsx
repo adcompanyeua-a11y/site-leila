@@ -5,7 +5,7 @@ import { Services } from "@/components/Services";
 import { Atelier } from "@/components/Atelier";
 import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
-import { Instagram } from "@/components/Instagram";
+import { TikTokFeed } from "@/components/TikTokFeed";
 import { BookingCTA } from "@/components/BookingCTA";
 import { Footer } from "@/components/Footer";
 import { StickyBook } from "@/components/StickyBook";
@@ -34,7 +34,7 @@ function Index() {
           <Atelier />
           <Gallery />
           <Testimonials />
-          <Instagram />
+          <TikTokFeed />
           <BookingCTA />
         </main>
         <Footer />

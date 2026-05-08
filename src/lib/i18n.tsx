@@ -9,7 +9,7 @@ const dict: Record<Lang, Dict> = {
     nav_services: "Services",
     nav_gallery: "Transformations",
     nav_testimonials: "Reviews",
-    nav_instagram: "Journal",
+    nav_instagram: "TikTok",
     nav_contact: "Contact",
     nav_book: "Book Now",
 
@@ -57,8 +57,8 @@ const dict: Record<Lang, Dict> = {
     testimonials_title_1: "Words from our",
     testimonials_title_2: "muses",
 
-    instagram_title_1: "Live from the",
-    instagram_title_2: "studio",
+    instagram_title_1: "Watch on",
+    instagram_title_2: "TikTok",
     instagram_follow: "Follow on Instagram →",
 
     book_eyebrow: "— Reserve",
@@ -83,7 +83,7 @@ const dict: Record<Lang, Dict> = {
     nav_services: "Servicios",
     nav_gallery: "Transformaciones",
     nav_testimonials: "Reseñas",
-    nav_instagram: "Diario",
+    nav_instagram: "TikTok",
     nav_contact: "Contacto",
     nav_book: "Reservar",
 
@@ -131,8 +131,8 @@ const dict: Record<Lang, Dict> = {
     testimonials_title_1: "Palabras de nuestras",
     testimonials_title_2: "musas",
 
-    instagram_title_1: "En vivo desde el",
-    instagram_title_2: "estudio",
+    instagram_title_1: "Ver en",
+    instagram_title_2: "TikTok",
     instagram_follow: "Síguenos en Instagram →",
 
     book_eyebrow: "— Reserva",
