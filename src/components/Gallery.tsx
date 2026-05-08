@@ -4,8 +4,10 @@ import before1 from "@/assets/before1.jpg";
 import after1 from "@/assets/after1.jpg";
 import before2 from "@/assets/before2.jpg";
 import after2 from "@/assets/after2.jpg";
+import { useI18n } from "@/lib/i18n";
 
 function BeforeAfter({ before, after, label }: { before: string; after: string; label: string }) {
+  const { t } = useI18n();
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState(50);
 
@@ -34,8 +36,8 @@ function BeforeAfter({ before, after, label }: { before: string; after: string; 
             ⇆
           </div>
         </div>
-        <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.3em] bg-background/70 px-3 py-1.5 backdrop-blur text-primary">Before</span>
-        <span className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.3em] bg-background/70 px-3 py-1.5 backdrop-blur text-primary">After</span>
+        <span className="absolute top-4 left-4 text-[10px] uppercase tracking-[0.3em] bg-background/70 px-3 py-1.5 backdrop-blur text-primary">{t("gallery_before")}</span>
+        <span className="absolute top-4 right-4 text-[10px] uppercase tracking-[0.3em] bg-background/70 px-3 py-1.5 backdrop-blur text-primary">{t("gallery_after")}</span>
       </div>
       <p className="text-center text-[11px] uppercase tracking-[0.32em] text-muted-foreground">{label}</p>
     </div>
@@ -43,16 +45,17 @@ function BeforeAfter({ before, after, label }: { before: string; after: string; 
 }
 
 export function Gallery() {
+  const { t } = useI18n();
   return (
     <section id="gallery" className="relative py-32 md:py-44 bg-onyx">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-20 max-w-2xl mx-auto">
-          <span className="text-[10px] uppercase tracking-[0.42em] text-primary">— The Transformations</span>
+          <span className="text-[10px] uppercase tracking-[0.42em] text-primary">{t("gallery_eyebrow")}</span>
           <h2 className="mt-6 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
-            Before <span className="italic text-gold-gradient">&</span> After
+            {t("gallery_title_1")} <span className="italic text-gold-gradient">{t("gallery_title_2")}</span> {t("gallery_title_3")}
           </h2>
           <p className="mt-6 text-muted-foreground font-light">
-            Drag the slider to witness the Alabama touch — frizz dissolved, dimension revealed.
+            {t("gallery_desc")}
           </p>
         </div>
 
@@ -63,8 +66,8 @@ export function Gallery() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="grid md:grid-cols-2 gap-10 md:gap-14"
         >
-          <BeforeAfter before={before1} after={after1} label="Brazilian Keratin Treatment" />
-          <BeforeAfter before={before2} after={after2} label="Lived-In Brunette Balayage" />
+          <BeforeAfter before={before1} after={after1} label={t("gallery_label_1")} />
+          <BeforeAfter before={before2} after={after2} label={t("gallery_label_2")} />
         </motion.div>
       </div>
     </section>

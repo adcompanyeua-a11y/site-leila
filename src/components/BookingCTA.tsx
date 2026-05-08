@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useI18n } from "@/lib/i18n";
 
 export function BookingCTA() {
+  const { t } = useI18n();
   return (
     <section id="book" className="relative py-32 md:py-44 overflow-hidden">
       <div className="absolute inset-0 bg-[image:var(--gradient-gold)] opacity-[0.06]" />
@@ -14,12 +16,12 @@ export function BookingCTA() {
         transition={{ duration: 1 }}
         className="relative mx-auto max-w-4xl px-6 text-center"
       >
-        <span className="text-[10px] uppercase tracking-[0.42em] text-primary">— Reserve</span>
+        <span className="text-[10px] uppercase tracking-[0.42em] text-primary">{t("book_eyebrow")}</span>
         <h2 className="mt-6 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
-          Your hair, <span className="italic text-gold-gradient">elevated</span>.
+          {t("book_title_1")} <span className="italic text-gold-gradient">{t("book_title_2")}</span>.
         </h2>
         <p className="mt-8 text-muted-foreground font-light max-w-xl mx-auto">
-          Limited weekly seats. Inquire today and step into the most coveted chair in the city.
+          {t("book_desc")}
         </p>
 
         <div id="contact" className="mt-12 flex flex-wrap justify-center gap-5">
@@ -29,7 +31,7 @@ export function BookingCTA() {
             rel="noreferrer"
             className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[image:var(--gradient-gold)] text-primary-foreground text-[11px] uppercase tracking-[0.32em] glow-on-hover font-medium"
           >
-            Book on WhatsApp
+            {t("book_whatsapp")}
           </a>
           <a
             href="tel:+13050000000"
@@ -41,15 +43,15 @@ export function BookingCTA() {
 
         <div className="mt-16 grid sm:grid-cols-3 gap-8 text-left max-w-3xl mx-auto pt-12 border-t border-border">
           <div>
-            <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">Studio</div>
+            <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">{t("book_studio")}</div>
             <div className="text-sm text-foreground/85">Brickell Avenue<br />Miami, FL</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">Hours</div>
-            <div className="text-sm text-foreground/85">Tue – Sat<br />10:00 — 19:00</div>
+            <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">{t("book_hours")}</div>
+            <div className="text-sm text-foreground/85 whitespace-pre-line">{t("book_hours_val")}</div>
           </div>
           <div>
-            <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">Email</div>
+            <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">{t("book_email")}</div>
             <div className="text-sm text-foreground/85">hello@alabamakeratin.com</div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import hero from "@/assets/hero.jpg";
+import { useI18n } from "@/lib/i18n";
 
 export function Hero() {
+  const { t } = useI18n();
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-onyx grain">
       <div className="absolute inset-0">
@@ -22,34 +24,33 @@ export function Hero() {
         >
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-12 bg-primary" />
-            <span className="text-[10px] uppercase tracking-[0.42em] text-primary">Est. Excellence</span>
+            <span className="text-[10px] uppercase tracking-[0.42em] text-primary">{t("hero_eyebrow")}</span>
           </div>
 
           <h1 className="font-display text-[clamp(3.2rem,9vw,8rem)] leading-[0.92] tracking-tight text-foreground">
-            The Art of <br />
-            <span className="italic text-gold-gradient">Brazilian</span> Keratin
+            {t("hero_title_1")} <br />
+            <span className="italic text-gold-gradient">{t("hero_title_2")}</span> {t("hero_title_3")}
           </h1>
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed font-light">
-            A private atelier dedicated to silk-smooth, glossy, transformative hair.
-            Hand-crafted treatments by master stylists for the modern muse.
+            {t("hero_desc")}
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-5">
             <a href="#book" className="inline-flex items-center gap-3 px-9 py-4 rounded-full bg-[image:var(--gradient-gold)] text-primary-foreground text-[11px] uppercase tracking-[0.32em] glow-on-hover font-medium">
-              Reserve Your Seat
+              {t("hero_cta_book")}
               <span aria-hidden>→</span>
             </a>
             <a href="#services" className="inline-flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors text-[11px] uppercase tracking-[0.32em]">
-              Discover Services
+              {t("hero_cta_services")}
             </a>
           </div>
 
           <div className="mt-20 grid grid-cols-3 gap-8 max-w-md border-t border-border pt-8">
             {[
-              { k: "12+", v: "Years" },
-              { k: "5K+", v: "Transformations" },
-              { k: "100%", v: "Formaldehyde Free" },
+              { k: "12+", v: t("hero_stat_years") },
+              { k: "5K+", v: t("hero_stat_transformations") },
+              { k: "100%", v: t("hero_stat_free") },
             ].map((s) => (
               <div key={s.v}>
                 <div className="font-display text-3xl text-gold-gradient">{s.k}</div>
@@ -62,7 +63,7 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary/70">
-        <span className="text-[9px] uppercase tracking-[0.42em]">Scroll</span>
+        <span className="text-[9px] uppercase tracking-[0.42em]">{t("hero_scroll")}</span>
         <div className="h-12 w-px bg-gradient-to-b from-primary to-transparent animate-float" />
       </div>
     </section>

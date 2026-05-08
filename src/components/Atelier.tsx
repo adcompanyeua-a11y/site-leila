@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import salon from "@/assets/salon.jpg";
+import { useI18n } from "@/lib/i18n";
 
 export function Atelier() {
+  const { t } = useI18n();
   return (
     <section className="relative py-32 md:py-44">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-14 items-center">
@@ -18,7 +20,7 @@ export function Atelier() {
           </div>
           <div className="absolute -bottom-8 -right-6 hidden md:block bg-card border border-border p-6 max-w-xs shadow-gold">
             <div className="font-display text-4xl text-gold-gradient">2014</div>
-            <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-2">Founded in Miami</div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-2">{t("atelier_founded")}</div>
           </div>
         </motion.div>
 
@@ -29,25 +31,19 @@ export function Atelier() {
           transition={{ duration: 1, delay: 0.15 }}
           className="lg:col-span-6 lg:pl-10"
         >
-          <span className="text-[10px] uppercase tracking-[0.42em] text-primary">— The Atelier</span>
+          <span className="text-[10px] uppercase tracking-[0.42em] text-primary">{t("atelier_eyebrow")}</span>
           <h2 className="mt-6 font-display text-5xl md:text-6xl leading-[0.95] tracking-tight">
-            A house built for <span className="italic text-gold-gradient">hair</span>.
+            {t("atelier_title_1")} <span className="italic text-gold-gradient">{t("atelier_title_2")}</span>.
           </h2>
           <p className="mt-8 text-muted-foreground font-light leading-relaxed">
-            Tucked between Beverly Hills tradition and Miami modernity, our private studio is intimate by design.
-            Only three chairs. Only invited guests. Only formaldehyde-free chemistry.
+            {t("atelier_p1")}
           </p>
           <p className="mt-5 text-muted-foreground font-light leading-relaxed">
-            Every appointment is a quiet ritual — espresso, champagne, and the unhurried craft of transformation.
+            {t("atelier_p2")}
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8">
-            {[
-              "Formaldehyde-Free Formulas",
-              "Master-Trained Stylists",
-              "Couture Color Bar",
-              "Private Atelier Setting",
-            ].map((f) => (
+            {[t("atelier_f1"), t("atelier_f2"), t("atelier_f3"), t("atelier_f4")].map((f) => (
               <div key={f} className="flex items-start gap-3">
                 <span className="mt-2 h-1 w-4 bg-[image:var(--gradient-gold)]" />
                 <span className="text-sm text-foreground/85">{f}</span>
