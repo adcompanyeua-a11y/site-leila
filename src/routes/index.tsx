@@ -16,9 +16,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Alabama · Brazilian Keratin Expert | Luxury Hair Atelier" },
-      { name: "description", content: "Private luxury atelier specializing in Brazilian keratin, balayage, and lived-in brunette transformations. Formaldehyde-free, couture hair in Miami." },
+      { name: "description", content: "Private luxury atelier specializing in Brazilian keratin, balayage, and lived-in brunette transformations. Formaldehyde-free, couture hair in Randolph, Alabama." },
       { property: "og:title", content: "Alabama · Brazilian Keratin Expert" },
-      { property: "og:description", content: "Couture Brazilian keratin and balayage, in a private Miami atelier." },
+      { property: "og:description", content: "Couture Brazilian keratin and balayage, in a private Randolph, Alabama atelier." },
     ],
   }),
 });
