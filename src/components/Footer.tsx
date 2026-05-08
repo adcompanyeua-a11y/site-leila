@@ -27,7 +27,7 @@ export function Footer() {
           <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-5">{t("footer_connect")}</div>
           <ul className="space-y-2 text-sm text-foreground/80">
             <li><a href="https://www.instagram.com/alabama__brazilian_keratin/" target="_blank" rel="noreferrer" className="hover:text-primary">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@leila.bassanezi" target="_blank" rel="noreferrer" className="hover:text-primary">TikTok</a></li>
+            <li><a href="https://wa.me/12059831715?text=Hello%2C%20I%20came%20from%20the%20website%20and%20I%20want%20more%20information." target="_blank" rel="noreferrer" className="hover:text-primary">WhatsApp</a></li>
             <li><a href="mailto:hello@alabamakeratin.com" className="hover:text-primary">Email</a></li>
           </ul>
         </div>
