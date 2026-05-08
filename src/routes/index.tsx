@@ -9,6 +9,7 @@ import { Instagram } from "@/components/Instagram";
 import { BookingCTA } from "@/components/BookingCTA";
 import { Footer } from "@/components/Footer";
 import { StickyBook } from "@/components/StickyBook";
+import { I18nProvider } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -24,19 +25,21 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <Atelier />
-        <Gallery />
-        <Testimonials />
-        <Instagram />
-        <BookingCTA />
-      </main>
-      <Footer />
-      <StickyBook />
-    </div>
+    <I18nProvider>
+      <div className="dark min-h-screen bg-background text-foreground">
+        <Navbar />
+        <main>
+          <Hero />
+          <Services />
+          <Atelier />
+          <Gallery />
+          <Testimonials />
+          <Instagram />
+          <BookingCTA />
+        </main>
+        <Footer />
+        <StickyBook />
+      </div>
+    </I18nProvider>
   );
 }
