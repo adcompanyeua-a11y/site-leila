@@ -33,7 +33,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border py-6 text-center text-[10px] uppercase tracking-[0.32em] text-muted-foreground">
-        © {new Date().getFullYear()} Alabama Brazilian Keratin Expert · {t("footer_rights")}
+        © {new Date().getFullYear()} Alabama Brazilian Keratin Expert · <a href="https://agenciaadcompany.com.br/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">{t("footer_rights")}</a>
       </div>
     </footer>
   );

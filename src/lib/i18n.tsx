@@ -75,7 +75,7 @@ const dict: Record<Lang, Dict> = {
     footer_visit: "Visit",
     footer_connect: "Connect",
     footer_address: "Randolph, Alabama",
-    footer_rights: "Crafted with gold",
+    footer_rights: "Created by AD Company",
 
     sticky_book: "Book Now",
   },
@@ -149,7 +149,7 @@ const dict: Record<Lang, Dict> = {
     footer_visit: "Visítanos",
     footer_connect: "Conecta",
     footer_address: "Randolph, Alabama",
-    footer_rights: "Hecho con oro",
+    footer_rights: "Created by AD Company",
 
     sticky_book: "Reservar",
   },
