@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/hero.webp";
 import { useI18n } from "@/lib/i18n";
 
 export function Hero() {
@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-onyx grain">
       <div className="absolute inset-0">
-        <img src={hero} alt="Luxury keratin hair transformation" className="h-full w-full object-cover object-center opacity-80" />
+        <img src={hero} alt="Luxury keratin hair transformation" className="h-full w-full object-cover object-center opacity-80" loading="eager" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-background/40" />
       </div>

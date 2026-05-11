@@ -53,6 +53,7 @@ function AutoSlider({
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
             transition={{ duration: 0.8, ease: [0.32, 0.72, 0, 1] }}
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover"
           />
         </AnimatePresence>

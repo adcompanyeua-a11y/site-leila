@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import salon from "@/assets/salon.jpg";
+import salon from "@/assets/salon.webp";
 import { useI18n } from "@/lib/i18n";
 
 export function Atelier() {
@@ -15,7 +15,7 @@ export function Atelier() {
           className="lg:col-span-6 relative"
         >
           <div className="relative overflow-hidden rounded-sm ring-1 ring-border">
-            <img src={salon} alt="Alabama luxury salon interior" className="w-full aspect-[4/5] object-cover" loading="lazy" />
+            <img src={salon} alt="Alabama luxury salon interior" className="w-full aspect-[4/5] object-cover" loading="lazy" decoding="async" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
           </div>
           <div className="absolute -bottom-8 -right-6 hidden md:block bg-card border border-border p-6 max-w-xs shadow-gold">
