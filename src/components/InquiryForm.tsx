@@ -2,12 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const SERVICES = [
-  "Brazilian Keratin",
+  "Brazilian Keratin Treatment",
   "Haircut",
   "Balayage",
-  "Botox (Volume Reduction)",
-  "Color / Highlights",
-  "Blow-dry / Styling",
+  "Highlights",
+  " Lived-In Brunette",
+  "Hair Coloring (General)",
+  "Color Correction",
 ];
 
 export function InquiryForm() {
