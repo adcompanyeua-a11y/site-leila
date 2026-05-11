@@ -9,11 +9,11 @@ import t5 from "@/assets/transformations/transformation5.webp";
 import t6 from "@/assets/transformations/transformation6.webp";
 import t7 from "@/assets/transformations/transformation7.webp";
 
-/* Container 1 — Before & After: fotos 3, 4 (side-by-side comparison shots) */
-const beforeAfterImages = [t3, t4];
+/* Container 1 — Before & After: fotos 2, 7 (side-by-side comparison shots) */
+const beforeAfterImages = [t2, t7];
 
-/* Container 2 — Real Transformations: fotos 1, 2, 5, 6 (result shots) */
-const realImages = [t1, t2, t5, t6];
+/* Container 2 — Real Transformations: fotos 1, 3, 4, 5, 6 (result shots) */
+const realImages = [t1, t3, t4, t5, t6];
 
 function AutoSlider({
   images,
