@@ -1,0 +1,130 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "/home/runner/work/site-leila/site-leila/src/styles.css": {
+    "file": "assets/styles-B4C9Zye4.css",
+    "src": "/home/runner/work/site-leila/site-leila/src/styles.css"
+  },
+  "_router-5THIQijf.js": {
+    "file": "assets/router-5THIQijf.js",
+    "name": "router",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BB22HVZW.js"
+    ],
+    "dynamicImports": [
+      "src/routes/index.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/styles-B4C9Zye4.css"
+    ]
+  },
+  "_server-BB22HVZW.js": {
+    "file": "assets/server-BB22HVZW.js",
+    "name": "server",
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "_router-5THIQijf.js",
+      "src/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "_worker-entry-H_80nJ9K.js": {
+    "file": "assets/worker-entry-H_80nJ9K.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "_server-BB22HVZW.js"
+    ]
+  },
+  "src/assets/hero.webp": {
+    "file": "assets/hero-JPCVkNV1.webp",
+    "src": "src/assets/hero.webp"
+  },
+  "src/assets/logo.webp": {
+    "file": "assets/logo-D8n68spy.webp",
+    "src": "src/assets/logo.webp"
+  },
+  "src/assets/salon.webp": {
+    "file": "assets/salon-CrqNqT92.webp",
+    "src": "src/assets/salon.webp"
+  },
+  "src/assets/transformations/transformation1.webp": {
+    "file": "assets/transformation1-OO2k_oFe.webp",
+    "src": "src/assets/transformations/transformation1.webp"
+  },
+  "src/assets/transformations/transformation2.webp": {
+    "file": "assets/transformation2-CIR9ehUo.webp",
+    "src": "src/assets/transformations/transformation2.webp"
+  },
+  "src/assets/transformations/transformation3.webp": {
+    "file": "assets/transformation3-CijYEajw.webp",
+    "src": "src/assets/transformations/transformation3.webp"
+  },
+  "src/assets/transformations/transformation4.webp": {
+    "file": "assets/transformation4-DYoR-Jqh.webp",
+    "src": "src/assets/transformations/transformation4.webp"
+  },
+  "src/assets/transformations/transformation5.webp": {
+    "file": "assets/transformation5-BwMnQcc3.webp",
+    "src": "src/assets/transformations/transformation5.webp"
+  },
+  "src/assets/transformations/transformation6.webp": {
+    "file": "assets/transformation6-BmrXGGWB.webp",
+    "src": "src/assets/transformations/transformation6.webp"
+  },
+  "src/assets/transformations/transformation7.webp": {
+    "file": "assets/transformation7-DfXFMVo1.webp",
+    "src": "src/assets/transformations/transformation7.webp"
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-1MZA19ZW.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BB22HVZW.js",
+      "_router-5THIQijf.js"
+    ],
+    "assets": [
+      "assets/logo-D8n68spy.webp",
+      "assets/hero-JPCVkNV1.webp",
+      "assets/salon-CrqNqT92.webp",
+      "assets/transformation1-OO2k_oFe.webp",
+      "assets/transformation2-CIR9ehUo.webp",
+      "assets/transformation3-CijYEajw.webp",
+      "assets/transformation4-DYoR-Jqh.webp",
+      "assets/transformation5-BwMnQcc3.webp",
+      "assets/transformation6-BmrXGGWB.webp",
+      "assets/transformation7-DfXFMVo1.webp"
+    ]
+  },
+  "src/start.ts": {
+    "file": "assets/start-CRf6_JRO.js",
+    "name": "start",
+    "src": "src/start.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-H_80nJ9K.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-BjoZ1GTq.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-H_80nJ9K.js"
+    ]
+  }
+}
