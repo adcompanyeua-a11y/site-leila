@@ -21,8 +21,10 @@ jobs:
 
       - run: bun run build
 
-      - name: Move build to root
-        run: cp -r dist/. .
+      - name: Move build to public_html
+        run: |
+          mkdir -p public_html
+          cp -r dist/. public_html/
 
       - name: Push build
         run: |
