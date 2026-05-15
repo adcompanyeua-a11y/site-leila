@@ -23,8 +23,8 @@ jobs:
 
       - name: Move build to public_html
         run: |
-          mkdir -p public_html
-          cp -r dist/. public_html/
+          mkdir -p "público_html"
+          cp -r dist/. "público_html/"
 
       - name: Push build
         run: |
