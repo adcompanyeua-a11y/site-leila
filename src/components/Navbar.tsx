@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.webp";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -33,13 +32,13 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
-        <Link to="/" className="flex items-center gap-3 group">
+        <a href="/" className="flex items-center gap-3 group">
           <img src={logo} alt="Alabama logo" className="h-11 w-11 rounded-full ring-1 ring-primary/40 group-hover:ring-primary transition" loading="eager" />
           <div className="hidden sm:block leading-tight">
             <div className="font-display text-xl text-gold-gradient tracking-wide">Alabama</div>
             <div className="text-[10px] uppercase tracking-[0.32em] text-muted-foreground">Brazilian Keratin Expert</div>
           </div>
-        </Link>
+        </a>
 
         <ul className="hidden lg:flex items-center gap-9 text-sm">
           {links.map((l) => (
