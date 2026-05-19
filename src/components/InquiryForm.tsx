@@ -14,16 +14,19 @@ const SERVICES = [
   { en: "Blowouts & Styling", es: "Secado y Peinado" },
 ];
 
+const WEB3FORMS_KEY = "f573a3b5-ab62-4fc9-af06-342056d7d765";
+
 export function InquiryForm() {
   const { t, lang } = useI18n();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
-  const [honeypot, setHoneypot] = useState(""); 
+  const [honeypot, setHoneypot] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [submitBlocked, setSubmitBlocked] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const lastSubmit = useRef<number>(0);
 
   const toggle = (s: string) => {
@@ -65,7 +68,7 @@ export function InquiryForm() {
     return Object.values(newErrors).every((e) => !e);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (honeypot) return;
 
@@ -81,14 +84,31 @@ export function InquiryForm() {
     if (!valid) return;
 
     lastSubmit.current = now;
+    setSubmitStatus("sending");
 
-    const message =
-      `Hello, I came from the website and I want more information.%0A%0A` +
-      `Name: ${encodeURIComponent(name.trim())}%0A` +
-      `Phone: ${encodeURIComponent(phone.trim())}%0A` +
-      `Email: ${encodeURIComponent(email.trim())}%0A` +
-      `Services: ${encodeURIComponent(selected.join(", ") || "—")}`;
-    window.open(`https://wa.me/12059831715?text=${message}`, "_blank");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: "New Inquiry — Alabama Brazilian Keratin",
+          name: name.trim(),
+          phone: phone.trim(),
+          email: email.trim(),
+          services: selected.join(", ") || "—",
+        }),
+      });
+      if (res.ok) {
+        setSubmitStatus("success");
+        setName(""); setPhone(""); setEmail(""); setSelected([]);
+        setTouched({});
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    }
   };
 
   const fieldClass = (field: string) =>
@@ -242,11 +262,25 @@ export function InquiryForm() {
             )}
           </AnimatePresence>
 
+          <AnimatePresence>
+            {submitStatus === "success" && (
+              <motion.p initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-center text-[12px] text-emerald-400">
+                ✓ Message sent! We'll be in touch soon.
+              </motion.p>
+            )}
+            {submitStatus === "error" && (
+              <motion.p initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="text-center text-[12px] text-red-400">
+                Something went wrong. Please try again or contact us directly.
+              </motion.p>
+            )}
+          </AnimatePresence>
+
           <button
             type="submit"
-            className="w-full inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-[image:var(--gradient-gold)] text-primary-foreground text-[11px] uppercase tracking-[0.32em] glow-on-hover font-medium"
+            disabled={submitStatus === "sending"}
+            className="w-full inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-[image:var(--gradient-gold)] text-primary-foreground text-[11px] uppercase tracking-[0.32em] glow-on-hover font-medium disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {t("form_submit")} <span aria-hidden>→</span>
+            {submitStatus === "sending" ? "Sending…" : <>{t("form_submit")} <span aria-hidden>→</span></>}
           </button>
         </motion.form>
       </div>

@@ -52,7 +52,7 @@ export function BookingCTA() {
           </div>
           <div>
             <div className="text-[10px] uppercase tracking-[0.32em] text-primary mb-2">{t("book_email")}</div>
-            <div className="text-sm text-foreground/85">contact@alabamakeratin.com</div>
+            <div className="text-sm text-foreground/85">alabamabraziliankeratinexpert@gmail.com</div>
           </div>
         </div>
       </motion.div>
